@@ -17,8 +17,10 @@ router.get("/:id?", (req, res) => {
 });
 
 // Create
-router.post("/", (req, res) => {
-    const body = req.body;
+router.post("/:id?",  async (req, res) => {
+    const id = req.params.id;
+
+    
 
     // chirpsStore.CreateChirp(body);
     res.sendStatus(200);
